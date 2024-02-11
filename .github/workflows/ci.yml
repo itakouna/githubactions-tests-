@@ -40,14 +40,6 @@ jobs:
       - name: Manual Approval
         uses: trstringer/manual-approval@v1
         timeout-minutes: 60
-        with:
-          secret: ${{ github.token }}
-          approvers: itakouna # your github username or team name
-          minimum-approvals: 1
-          issue-title: "Please validate deployment"
-          issue-body: "Please check the deployment and approve or deny"
-          exclude-workflow-initiator-as-approver: false
-          additional-approved-words: 'yes'
-          additional-denied-words: 'no'
+    
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
