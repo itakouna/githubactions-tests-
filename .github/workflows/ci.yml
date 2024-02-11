@@ -1,6 +1,6 @@
 name: GitHub Actions Multiple Environments
 run-name: ${{ github.actor }} tests GitHub Actions Multiple Environments 🚀
-on: [push]
+on: [push, workflow_dispatch]
 jobs:
   unittest:
     runs-on: ubuntu-latest
