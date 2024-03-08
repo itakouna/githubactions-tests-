@@ -29,7 +29,9 @@ jobs:
     needs: 
       - build #keyword is used to specify that a job depends on the successful 
     runs-on: ubuntu-latest
-    environment: staging
+    environment: 
+      name: staging
+      url: stage.example.com
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
